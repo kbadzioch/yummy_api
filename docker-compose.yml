@@ -1,0 +1,20 @@
+version: '3.8'
+volumes:
+  postgres-data:
+services:
+  db:
+    image: postgres:16
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_HOST_AUTH_METHOD=trust
+
+  app:
+    image: kodik/yummy-api:dev
+    command: sh -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'"
+    volumes:
+      - /usr/src/app/tmp
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
