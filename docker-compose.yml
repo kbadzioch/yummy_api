@@ -18,3 +18,11 @@ services:
       - "3000:3000"
     depends_on:
       - db
+
+  test:
+    image: kodik/yummy-api:test
+    command: tail -f /dev/null
+    volumes:
+      - /usr/src/app/tmp
+    depends_on:
+      - db
