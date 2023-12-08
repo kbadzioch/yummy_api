@@ -29,12 +29,17 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+
       - name: Install Ruby and gems
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: '3.2.2'
+          bundler-cache: true
+          cache-version: 1
+
       - name: Set up database schema
-        run: bin/rails db:schema:load
+        run: bundle exec rails db:schema:load
+
       - name: Run tests
         run: bundle exec rspec
 
