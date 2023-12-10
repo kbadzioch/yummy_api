@@ -15,6 +15,7 @@ group :development, :test do
   gem 'bundler-audit', '~> 0.9'
   gem 'factory_bot_rails', '~> 6.2'
   gem 'rspec', '~> 3.12'
+  gem 'rspec-rails', '~> 6.1'
   gem 'rubocop', '~> 1.56'
   gem 'rubocop-rails', '~> 2.21'
   gem 'simplecov', '~> 0.22'
