@@ -3,4 +3,4 @@ require: rubocop-rails
 AllCops:
   Exclude:
     - schema.rb
-    - vendor/**/*.rb
+    - vendor/**/*
