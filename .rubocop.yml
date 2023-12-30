@@ -1,6 +1,7 @@
 require: rubocop-rails
 
 AllCops:
+  NewCops: disable
   Exclude:
     - schema.rb
     - vendor/**/*
