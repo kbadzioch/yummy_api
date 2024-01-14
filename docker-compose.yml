@@ -18,6 +18,8 @@ services:
       - "3000:3000"
     depends_on:
       - db
+    environment:
+      RAILS_ENV: development
 
   test:
     image: kodik/yummy-api:test
@@ -26,3 +28,5 @@ services:
       - /usr/src/app/tmp
     depends_on:
       - db
+    environment:
+      RAILS_ENV: test

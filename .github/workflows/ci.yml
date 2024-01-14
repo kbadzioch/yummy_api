@@ -37,7 +37,7 @@ jobs:
           bundler-cache: true
           cache-version: 1
 
-      - name: Run tests
+      - name: Run tests with coverage
         run: bundle exec rspec
 
       - name: Run linter

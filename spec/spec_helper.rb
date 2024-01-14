@@ -14,6 +14,17 @@
 # the additional setup, and require it from the spec files that actually need
 # it.
 #
+
+if ENV['RAILS_ENV'] == 'test'
+  require 'simplecov'
+
+  SimpleCov.start 'rails' do
+    enable_coverage :branch
+  end
+
+  SimpleCov.minimum_coverage line: 95, branch: 90
+end
+
 # See https://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 RSpec.configure do |config|
   # rspec-expectations config goes here. You can use an alternate
