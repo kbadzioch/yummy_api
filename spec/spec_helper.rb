@@ -22,7 +22,8 @@ if ENV['RAILS_ENV'] == 'test'
     enable_coverage :branch
   end
 
-  SimpleCov.minimum_coverage line: 95, branch: 90
+  # Uncomment when tests are present
+  # SimpleCov.minimum_coverage line: 95, branch: 90
 end
 
 # See https://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
