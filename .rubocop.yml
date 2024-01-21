@@ -1,6 +1,10 @@
-require: rubocop-rails
+require:
+  - rubocop-rails
+  - rubocop-performance
 
 AllCops:
+  TargetRubyVersion: 3.2
+  TargetRailsVersion: 7.0
   NewCops: disable
   Exclude:
     - schema.rb
