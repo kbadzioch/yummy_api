@@ -4,7 +4,7 @@ WORKDIR /usr/src/app
 
 RUN apk update && apk add build-base postgresql-dev tzdata
 
-COPY Gemfile Gemfile.lock* ./
+COPY Gemfile Gemfile.lock* .ruby-version ./
 
 RUN bundle install
 
