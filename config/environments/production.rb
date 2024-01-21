@@ -85,4 +85,7 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+  # Revents lazy loading of associations
+  config.active_record.strict_loading_by_default = true
 end
